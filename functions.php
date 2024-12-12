@@ -8,14 +8,6 @@
 
     add_action('wp_enqueue_scripts', 'main_files');
 
-    function wpb_custom_new_menu() {
-        register_nav_menu('main-menu', 'Main menu');
-    }
-    add_action( 'init', 'wpb_custom_new_menu' );
-
-
-    require_once get_template_directory() .'/class-wp-bootstrap-navwalker.php';
-
     add_theme_support('post-thumbnails');
 
     add_theme_support('title-tag');
