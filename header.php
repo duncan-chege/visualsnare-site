@@ -9,13 +9,14 @@
         echo " | ";
         bloginfo("name");
         ?></title>
+        <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/main-logo.svg">
 
         <?php wp_head(); ?>
     </head>
 
     <body <?php body_class(); ?>>
         <header>
-            <nav class="w-full flex flex-row py-4 px-16 justify-between bg-light-grey">
+            <nav class="w-full flex flex-row py-4 px-8 md:px-16 justify-between bg-light-grey">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/main-logo.svg" alt="main website logo">
                 <div class="flex flex-row no-wrap basis-1/2 justify-around items-center text-grey text-lg">
                     <a href="">home</a>
