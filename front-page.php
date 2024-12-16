@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="px-8 py-14 lg:py-28 lg:px-16 bg-light-grey text-grey">
+<div class="px-8 py-14 lg:py-28 lg:px-16 bg-light-grey text-grey" id="home">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
         <h1 class="font-bold text-4xl lg:text-6xl text-orange"> Levelling up your business digitally </h1>
@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<div class="px-8 lg:px-16 my-16">
+<div class="px-8 lg:px-16 my-16" id="work">
   <h2 class="text-4xl mb-8 font-bold">Work</h2>
   <div class="flex w-full md:w-1/2 xl:w-1/4 mb-8 justify-between" role="tablist">
     <button class="py-2 px-6 bg-neutral-500 text-white rounded-lg" role="tab">Web Development</button>

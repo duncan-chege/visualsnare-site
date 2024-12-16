@@ -16,12 +16,12 @@
 
     <body <?php body_class(); ?>>
         <header>
-            <nav class="w-full flex flex-row py-4 px-8 md:px-16 justify-between bg-light-grey">
+            <nav class="fixed top-0 left-0 right-0 w-full flex flex-row py-4 px-8 md:px-16 justify-between bg-light-grey">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/main-logo.svg" alt="main website logo">
                 <div class="flex flex-row no-wrap basis-1/2 justify-around items-center text-grey text-lg">
-                    <a href="">home</a>
-                    <a href="">work</a>
-                    <a href="">contacts</a>
+                    <a href="#home">home</a>
+                    <a href="#work">work</a>
+                    <a href="#contacts">contacts</a>
                 </div>
             </nav>
         </header>

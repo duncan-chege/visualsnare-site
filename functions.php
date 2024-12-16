@@ -2,8 +2,7 @@
     function main_files(){
         wp_enqueue_style( 'output', get_template_directory_uri() . '/dist/output.css', array() );
         wp_enqueue_style('main-css', get_stylesheet_uri());
-    
-        wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), null, true );
+        wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/js/scripts.js', null, true );
     }
 
     add_action('wp_enqueue_scripts', 'main_files');

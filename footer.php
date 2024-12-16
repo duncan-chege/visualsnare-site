@@ -1,5 +1,5 @@
 
-<footer class='bg-light-grey text-grey grid md:grid-cols-2 grid-cols-1 gap-6 p-8 md:p-0'>
+<footer class='bg-light-grey text-grey grid md:grid-cols-2 grid-cols-1 gap-6 p-8 md:p-0' id="contacts">
     <img class="h-64 md:h-full object-contain self-center" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer-man.png" alt="">
 
     <div>
