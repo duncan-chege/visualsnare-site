@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<div class="px-8 lg:px-16 py-28" id="work">
+<div class="px-8 lg:px-16 py-24" id="work">
   <h2 class="text-4xl mb-8 font-bold">Work</h2>
   <div class="flex w-full md:w-1/2 xl:w-1/4 mb-8 justify-between" role="tablist">
     <button class="py-2 px-6 bg-neutral-500 text-white rounded-lg" role="tab">Web Development</button>
