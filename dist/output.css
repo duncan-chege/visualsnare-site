@@ -676,14 +676,6 @@ html {
   height: 100%;
 }
 
-.w-1\/2{
-  width: 50%;
-}
-
-.w-2\/5{
-  width: 40%;
-}
-
 .w-28{
   width: 7rem;
 }
@@ -694,10 +686,6 @@ html {
 
 .w-full{
   width: 100%;
-}
-
-.w-2\/3{
-  width: 66.666667%;
 }
 
 .basis-1\/2{
@@ -805,6 +793,10 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-white\/50{
+  background-color: rgb(255 255 255 / 0.5);
+}
+
 .bg-white\/70{
   background-color: rgb(255 255 255 / 0.7);
 }
@@ -859,19 +851,9 @@ html {
   padding-bottom: 0.375rem;
 }
 
-.py-12{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.py-24{
-  padding-top: 6rem;
-  padding-bottom: 6rem;
 }
 
 .py-20{
@@ -879,9 +861,9 @@ html {
   padding-bottom: 5rem;
 }
 
-.py-16{
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+.py-24{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .pb-4{
@@ -984,18 +966,6 @@ html {
     width: 75%;
   }
 
-  .md\:w-2\/5{
-    width: 40%;
-  }
-
-  .md\:w-2\/4{
-    width: 50%;
-  }
-
-  .md\:w-3\/5{
-    width: 60%;
-  }
-
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1011,18 +981,8 @@ html {
 }
 
 @media (min-width: 1024px){
-  @media (min-width: 768px){
-    .lg\:md\:w-3\/4{
-      width: 75%;
-    }
-  }
-
   .lg\:w-2\/5{
     width: 40%;
-  }
-
-  .lg\:w-3\/4{
-    width: 75%;
   }
 
   .lg\:gap-x-16{
@@ -1052,15 +1012,11 @@ html {
 }
 
 @media (min-width: 1280px){
-  .xl\:w-\[570px\]{
-    width: 570px;
-  }
-
   .xl\:w-1\/2{
     width: 50%;
   }
 
-  .xl\:w-2\/5{
-    width: 40%;
+  .xl\:w-\[570px\]{
+    width: 570px;
   }
 }
