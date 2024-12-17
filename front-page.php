@@ -12,11 +12,11 @@
           <p class="mt-4">We specialize in bespoke web development which entails coding, testing applications, user interface design, user research and more </p>
           <div class="flex justify-around mt-8">
             <div class="flex flex-col">
-              <img class="w-28 h-28 object-contain" src="<?php echo get_template_directory_uri(); ?>/assets/img/web-dev-icon.svg" alt="web development icon">
+              <img class="w-28 h-28 object-contain my-0 mx-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/web-dev-icon.svg" alt="web development icon">
               <p class="font-bold text-center text-blue"> Web Development </p>
             </div>
             <div class="flex flex-col">
-              <img class="w-28 h-28 object-contain" src="<?php echo get_template_directory_uri(); ?>/assets/img/ui-design-icon.svg" alt="ui design icon">
+              <img class="w-28 h-28 object-contain my-0 mx-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/ui-design-icon.svg" alt="ui design icon">
               <p class="font-bold text-center text-blue"> UI Design </p>
             </div>
           </div>
@@ -25,7 +25,7 @@
   </div>
 </div>
 
-<div class="px-8 lg:px-16 py-24" id="work">
+<div class="px-8 lg:px-16 py-20" id="work">
   <h2 class="text-4xl text-blue mb-8 font-bold text-center">Work</h2>
   <div class="flex mb-8 w-2/5 justify-between my-0 mx-auto" role="tablist">
     <button class="py-2 px-6 bg-dark-blue text-white rounded-lg" role="tab">Web Development</button>
