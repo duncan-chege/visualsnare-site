@@ -1,26 +1,28 @@
 <?php get_header(); ?>
 
-<div class="px-8 py-14 lg:py-36 lg:px-16 bg-light-grey text-grey" id="home">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-[url('../assets/img/hero-background.jpg')] bg-cover" id="home">
+  <div class="px-8 py-12 lg:py-28 lg:px-16 bg-white/70 backdrop-blur-md">
+    <div class="w-1/2 my-0 mx-auto">
       <div>
-        <h1 class="font-bold text-4xl lg:text-6xl text-orange"> Levelling up your business digitally </h1>
-        <img class="w-3/4" src="<?php echo get_template_directory_uri(); ?>/assets/img/heading-line.svg" alt="" />
+          <h1 class="font-bold text-4xl lg:text-6xl text-blue text-center"> Levelling up your business digitally </h1>
+          <img class="text-center my-0 mx-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/heading-line.svg" alt="" />
       </div>
-      <div class=" text-base lg:text-lg">
-        <p>Visualsnare is a digital design studio based in Nairobi-Kenya that solves business needs with great visual aesthetics, clear communication and effective software</p>
-        <p class="mt-4">We specialize in bespoke web development which entails coding, testing applications, user interface design, user research and more </p>
-        <div class="flex justify-around mt-8">
-          <div class="flex flex-col">
-            <img class="w-20 lg:w-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/web-dev-icon.svg" alt="web development icon">
-            <p class="font-bold text-center"> Web Development </p>
+      <div class=" text-base lg:text-lg text-blue mt-4 text-center">
+          <p>Visualsnare is a digital design studio based in Nairobi-Kenya that solves business needs with great visual aesthetics, clear communication and effective software</p>
+          <p class="mt-4">We specialize in bespoke web development which entails coding, testing applications, user interface design, user research and more </p>
+          <div class="flex justify-around mt-8">
+            <div class="flex flex-col">
+              <img class="w-28 h-28 object-contain" src="<?php echo get_template_directory_uri(); ?>/assets/img/web-dev-icon.svg" alt="web development icon">
+              <p class="font-bold text-center text-blue"> Web Development </p>
+            </div>
+            <div class="flex flex-col">
+              <img class="w-28 h-28 object-contain" src="<?php echo get_template_directory_uri(); ?>/assets/img/ui-design-icon.svg" alt="ui design icon">
+              <p class="font-bold text-center text-blue"> UI Design </p>
+            </div>
           </div>
-          <div class="flex flex-col">
-            <img class="w-20 lg:w-auto lg:h-full" src="<?php echo get_template_directory_uri(); ?>/assets/img/ui-design-icon.svg" alt="ui design icon">
-            <p class="font-bold text-center"> UI Design </p>
-          </div>
-        </div>
       </div>    
     </div>
+  </div>
 </div>
 
 <div class="px-8 lg:px-16 py-24" id="work">

@@ -16,12 +16,12 @@
 
     <body <?php body_class(); ?>>
         <header>
-            <nav class="fixed top-0 left-0 right-0 w-full flex flex-row py-4 px-8 md:px-16 justify-between bg-light-grey transition-transform duration-300" id="navbar">
-            <a href="<?php echo home_url('/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/main-logo.svg" alt="main website logo"></a>
+            <nav class="z-10 bg-white/90 backdrop-blur-md border-slate-100 border-2 rounded-2xl w-2/5 justify-between my-0 mx-auto fixed top-2 left-0 right-0 flex flex-row py-2 px-8 md:px-16 bg-light-grey transition-transform duration-300" id="navbar">
+                <a href="<?php echo home_url('/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/main-logo.svg" alt="main website logo"></a>
                 <div class="flex flex-row no-wrap basis-1/2 justify-around items-center text-grey text-lg">
-                    <a class="menu-item" href="#home">home</a>
-                    <a class="menu-item" href="#work">work</a>
-                    <a class="menu-item" href="#contacts">contacts</a>
+                    <a class="text-blue menu-item" href="#home">home</a>
+                    <a class="text-blue menu-item" href="#work">work</a>
+                    <a class="text-blue menu-item" href="#contacts">contacts</a>
                 </div>
             </nav>
         </header>
@@ -50,9 +50,9 @@
                 navbarItems.forEach((item) => {
                     item.addEventListener("click", () => {
                         navbarItems.forEach((nav) =>
-                            nav.classList.remove("rounded-lg", "px-4", "py-1.5", "bg-gray-300"),
+                            nav.classList.remove("rounded-lg", "px-4", "py-1.5", "bg-blue","text-white"),
                         );
-                        item.classList.add("rounded-lg", "px-4", "py-1.5", "bg-gray-300");
+                        item.classList.add("rounded-lg", "px-4", "py-1.5", "bg-blue", "text-white");
                     });
                 });
             });
