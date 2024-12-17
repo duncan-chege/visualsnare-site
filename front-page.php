@@ -26,27 +26,27 @@
 </div>
 
 <div class="px-8 lg:px-16 py-24" id="work">
-  <h2 class="text-4xl mb-8 font-bold">Work</h2>
-  <div class="flex w-full md:w-1/2 xl:w-1/4 mb-8 justify-between" role="tablist">
-    <button class="py-2 px-6 bg-neutral-500 text-white rounded-lg" role="tab">Web Development</button>
-    <button class="py-2 px-6 bg-neutral-300 rounded-lg" role="tab">UI Design</button>
+  <h2 class="text-4xl text-blue mb-8 font-bold text-center">Work</h2>
+  <div class="flex mb-8 w-2/5 justify-between my-0 mx-auto" role="tablist">
+    <button class="py-2 px-6 bg-dark-blue text-white rounded-lg" role="tab">Web Development</button>
+    <button class="py-2 px-6 bg-light-blue text-blue rounded-lg" role="tab">UI Design</button>
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-12">
     <div class="w-full xl:w-[570px]">
       <img class="object-cover h-full w-auto rounded-t-xl" src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-1.png" alt="" />
-      <p class="relative bg-white leading-none left-4 bottom-8 text-lg font-semibold px-4 py-2">Advancing Grassroots Football Through The FFA Website</p>
+      <p class="relative text-dark-blue bg-white leading-none left-4 bottom-8 text-lg font-semibold px-4 py-2">Advancing Grassroots Football Through The FFA Website</p>
     </div>
     <div class="w-full xl:w-[570px]">
       <img class="object-cover h-full w-auto rounded-t-xl" src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-1.png" alt="" />
-      <p class="relative bg-white leading-none left-4 bottom-8 text-lg font-semibold px-4 py-2">Advancing Grassroots Football Through The FFA Website</p>
+      <p class="relative text-dark-blue bg-white leading-none left-4 bottom-8 text-lg font-semibold px-4 py-2">Advancing Grassroots Football Through The FFA Website</p>
     </div>
     <div class="w-full xl:w-[570px]">
       <img class="object-cover h-full w-auto rounded-t-xl" src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-1.png" alt="" />
-      <p class="relative bg-white leading-none left-4 bottom-8 text-lg font-semibold px-4 py-2">Advancing Grassroots Football Through The FFA Website</p>
+      <p class="relative text-dark-blue bg-white leading-none left-4 bottom-8 text-lg font-semibold px-4 py-2">Advancing Grassroots Football Through The FFA Website</p>
     </div>
     <div class="h-full w-full xl:w-[570px]">
       <img class="object-cover h-full w-auto rounded-t-xl" src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-1.png" alt="" />
-      <p class="relative bg-white leading-none left-4 bottom-8 text-lg font-semibold px-4 py-2">Advancing Grassroots Football Through The FFA Website</p>
+      <p class="relative text-dark-blue bg-white leading-none left-4 bottom-8 text-lg font-semibold px-4 py-2">Advancing Grassroots Football Through The FFA Website</p>
     </div>
   </div>
 </div>
