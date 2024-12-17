@@ -696,6 +696,10 @@ html {
   width: 100%;
 }
 
+.w-2\/3{
+  width: 66.666667%;
+}
+
 .basis-1\/2{
   flex-basis: 50%;
 }
@@ -972,6 +976,26 @@ html {
     height: 100%;
   }
 
+  .md\:w-2\/3{
+    width: 66.666667%;
+  }
+
+  .md\:w-3\/4{
+    width: 75%;
+  }
+
+  .md\:w-2\/5{
+    width: 40%;
+  }
+
+  .md\:w-2\/4{
+    width: 50%;
+  }
+
+  .md\:w-3\/5{
+    width: 60%;
+  }
+
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -987,6 +1011,20 @@ html {
 }
 
 @media (min-width: 1024px){
+  @media (min-width: 768px){
+    .lg\:md\:w-3\/4{
+      width: 75%;
+    }
+  }
+
+  .lg\:w-2\/5{
+    width: 40%;
+  }
+
+  .lg\:w-3\/4{
+    width: 75%;
+  }
+
   .lg\:gap-x-16{
     -moz-column-gap: 4rem;
          column-gap: 4rem;
@@ -1016,5 +1054,13 @@ html {
 @media (min-width: 1280px){
   .xl\:w-\[570px\]{
     width: 570px;
+  }
+
+  .xl\:w-1\/2{
+    width: 50%;
+  }
+
+  .xl\:w-2\/5{
+    width: 40%;
   }
 }

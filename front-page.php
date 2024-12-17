@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
 <div class="bg-[url('../assets/img/hero-background.jpg')] bg-cover" id="home">
-  <div class="px-8 py-12 lg:py-28 lg:px-16 bg-white/70 backdrop-blur-md">
-    <div class="w-1/2 my-0 mx-auto">
+  <div class="px-8 py-24 lg:py-28 lg:px-16 bg-white/70 backdrop-blur-md">
+    <div class="xl:w-1/2 md:w-3/4 my-0 mx-auto">
       <div>
           <h1 class="font-bold text-4xl lg:text-6xl text-blue text-center"> Levelling up your business digitally </h1>
           <img class="text-center my-0 mx-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/heading-line.svg" alt="" />
@@ -27,7 +27,7 @@
 
 <div class="px-8 lg:px-16 py-20" id="work">
   <h2 class="text-4xl text-blue mb-8 font-bold text-center">Work</h2>
-  <div class="flex mb-8 w-2/5 justify-between my-0 mx-auto" role="tablist">
+  <div class="flex mb-8 lg:w-2/5 md:w-2/3 w-full justify-between my-0 mx-auto" role="tablist">
     <button class="py-2 px-6 bg-dark-blue text-white rounded-lg" role="tab">Web Development</button>
     <button class="py-2 px-6 bg-light-blue text-blue rounded-lg" role="tab">UI Design</button>
   </div>
