@@ -805,6 +805,10 @@ html {
   background-color: rgb(255 255 255 / 0.9);
 }
 
+.bg-white\/80{
+  background-color: rgb(255 255 255 / 0.8);
+}
+
 .bg-\[url\(\'\.\.\/assets\/img\/footer-background\.jpg\'\)\]{
   background-image: url('../assets/img/footer-background.jpg');
 }

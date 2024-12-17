@@ -16,7 +16,7 @@
 
     <body <?php body_class(); ?>>
         <header>
-            <nav class="z-10 bg-white/90 backdrop-blur-md border-slate-100 border-2 rounded-2xl lg:w-2/5 md:w-3/4 w-full justify-between my-0 mx-auto fixed top-2 left-0 right-0 flex flex-row py-2 px-8 md:px-16 bg-light-grey transition-transform duration-300" id="navbar">
+            <nav class="z-10 bg-white/80 backdrop-blur-md border-slate-100 border-2 rounded-2xl lg:w-2/5 md:w-3/4 w-full justify-between my-0 mx-auto fixed top-2 left-0 right-0 flex flex-row py-2 px-8 md:px-16 bg-light-grey transition-transform duration-300" id="navbar">
                 <a href="<?php echo home_url('/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/main-logo.svg" alt="main website logo"></a>
                 <div class="flex flex-row no-wrap basis-1/2 justify-around items-center space-x-8 text-lg">
                     <a class="text-blue menu-item" href="#home">home</a>
