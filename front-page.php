@@ -31,26 +31,38 @@
     <button class="py-2 px-6 bg-dark-blue text-white rounded-lg" role="tab">Web Development</button>
     <button class="py-2 px-6 bg-light-blue text-blue rounded-lg" role="tab">UI Design</button>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-12 web-dev">
     <?php
-      $args = [
-          "post_type" => "web_dev",
-          "order" => "ASC",
-          "posts_per_page" => -1,
-      ];
-      $web_dev = new WP_Query($args);
+    $args = [
+        "post_type" => "web_dev",
+        "order" => "ASC",
+        "posts_per_page" => 4,
+        "paged" => 1, // Current page starts at 1
+    ];
+    $web_dev = new WP_Query($args);
     ?>
-    <?php if ($web_dev-> have_posts()):  ?>
-        <?php while($web_dev->have_posts()): $web_dev->the_post(); ?>
+    <?php if ($web_dev->have_posts()): ?>
+        <?php while ($web_dev->have_posts()):
+            $web_dev->the_post(); ?>
         <div class="w-[570px] h-[380px]">
             <a href="<?php echo get_permalink(); ?>" class="relative">
-                <?php the_post_thumbnail('large', ['class' => 'object-cover w-full h-full rounded-t-xl brightness-75']); ?>
+                <?php the_post_thumbnail("large", [
+                    "class" =>
+                        "object-cover w-full h-full rounded-t-xl brightness-75",
+                ]); ?>
                 <p class="absolute text-dark-blue bg-white leading-none left-4 bottom-0 text-lg font-semibold px-4 py-2"> <?php the_title(); ?> </p>
             </a>
         </div>
-        <?php endwhile; ?>
-    <?php endif ?>
+        <?php
+        endwhile; ?>
+    <?php endif; ?>
   </div>
+  <div class="flex justify-center gap-4 mt-10">
+    <button id="prev-button" class="hover:bg-orange flex items-center bg-light-orange text-dark-blue font-bold px-4 py-2 rounded"><span class="pr-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/left-arrow-icon.svg">
+    </span>Previous</button>
+    <button id="next-button" class="hover:bg-orange flex items-center bg-light-orange text-dark-blue font-bold px-4 py-2 rounded">Next<span class="pl-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/right-arrow-icon.svg">
+    </span></button>
+</div>
 </div>
 
 <?php get_footer(); ?>

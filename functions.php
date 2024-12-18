@@ -1,8 +1,14 @@
 <?php 
     function main_files(){
-        wp_enqueue_style( 'output', get_template_directory_uri() . '/dist/output.css', array() );
+        wp_enqueue_style('output', get_template_directory_uri() . '/dist/output.css', array() );
         wp_enqueue_style('main-css', get_stylesheet_uri());
-        wp_enqueue_script( 'main-js', get_template_directory_uri() . '/assets/js/scripts.js', null, true );
+        wp_enqueue_style('splide-css', '//cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', '4.1.4');
+
+        wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), null, true );
+        wp_enqueue_script('ajax-pagination', get_template_directory_uri() . '/assets/js/ajax-pagination.js', ['jquery'], null, true);
+        wp_localize_script('ajax-pagination', 'ajaxpagination', [
+            'ajax_url' => admin_url('admin-ajax.php'),
+        ]);
     }
 
     add_action('wp_enqueue_scripts', 'main_files');
@@ -26,5 +32,55 @@
     }
     add_filter( 'body_class', 'add_slug_body_class' );
 
+    // Create an AJAX Handler to fetch posts dynamically
+    add_action('wp_ajax_load_more_posts', 'load_more_posts');
+    add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
 
+    function load_more_posts() {
+        $paged = isset($_POST['paged']) ? intval($_POST['paged']) : 1;
+        $posts_per_page = 4; // Number of posts to display per page
+
+        $args = [
+            'post_type' => 'web_dev',
+            "order" => "ASC",
+            'posts_per_page' => $posts_per_page,
+            'paged' => $paged,
+        ];
+        $query = new WP_Query($args);
+
+        // Check if there are next or previous pages
+        $has_next = $paged < $query->max_num_pages;
+        $has_prev = $paged > 1;
+
+        ob_start();
+        if ($query->have_posts()) {
+            while ($query->have_posts()) {
+                $query->the_post();
+                ?>
+                <div class="w-[570px] h-[380px]">
+                    <a href="<?php echo get_permalink(); ?>" class="relative">
+                        <?php the_post_thumbnail('large', ['class' => 'object-cover w-full h-full rounded-t-xl brightness-75']); ?>
+                        <p class="absolute text-dark-blue bg-white leading-none left-4 bottom-0 text-lg font-semibold px-4 py-2">
+                            <?php the_title(); ?>
+                        </p>
+                    </a>
+                </div>
+                <?php
+            }
+        } else {
+            echo '<p>No posts found.</p>';
+        }
+        wp_reset_postdata();
+
+        $html = ob_get_clean();
+
+        // Send JSON response
+        wp_send_json([
+            'html' => $html,
+            'hasNext' => $has_next,
+            'hasPrev' => $has_prev,
+        ]);
+    }
+
+    
 ?>
