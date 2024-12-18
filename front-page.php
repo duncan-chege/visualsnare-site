@@ -32,22 +32,24 @@
     <button class="py-2 px-6 bg-light-blue text-blue rounded-lg" role="tab">UI Design</button>
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-12">
-    <div class="w-full xl:w-[570px]">
-      <img class="object-cover h-full w-auto rounded-t-xl" src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-1.png" alt="" />
-      <p class="relative text-dark-blue bg-white leading-none left-4 bottom-8 text-lg font-semibold px-4 py-2">Advancing Grassroots Football Through The FFA Website</p>
-    </div>
-    <div class="w-full xl:w-[570px]">
-      <img class="object-cover h-full w-auto rounded-t-xl" src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-1.png" alt="" />
-      <p class="relative text-dark-blue bg-white leading-none left-4 bottom-8 text-lg font-semibold px-4 py-2">Advancing Grassroots Football Through The FFA Website</p>
-    </div>
-    <div class="w-full xl:w-[570px]">
-      <img class="object-cover h-full w-auto rounded-t-xl" src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-1.png" alt="" />
-      <p class="relative text-dark-blue bg-white leading-none left-4 bottom-8 text-lg font-semibold px-4 py-2">Advancing Grassroots Football Through The FFA Website</p>
-    </div>
-    <div class="h-full w-full xl:w-[570px]">
-      <img class="object-cover h-full w-auto rounded-t-xl" src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-1.png" alt="" />
-      <p class="relative text-dark-blue bg-white leading-none left-4 bottom-8 text-lg font-semibold px-4 py-2">Advancing Grassroots Football Through The FFA Website</p>
-    </div>
+    <?php
+      $args = [
+          "post_type" => "web_dev",
+          "order" => "ASC",
+          "posts_per_page" => -1,
+      ];
+      $web_dev = new WP_Query($args);
+    ?>
+    <?php if ($web_dev-> have_posts()):  ?>
+        <?php while($web_dev->have_posts()): $web_dev->the_post(); ?>
+        <div class="w-[570px] h-[380px]">
+            <a href="<?php echo get_permalink(); ?>" class="relative">
+                <?php the_post_thumbnail('large', ['class' => 'object-cover w-full h-full rounded-t-xl brightness-75']); ?>
+                <p class="absolute text-dark-blue bg-white leading-none left-4 bottom-0 text-lg font-semibold px-4 py-2"> <?php the_title(); ?> </p>
+            </a>
+        </div>
+        <?php endwhile; ?>
+    <?php endif ?>
   </div>
 </div>
 
