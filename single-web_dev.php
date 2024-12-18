@@ -3,7 +3,7 @@
 <?php while (have_posts()) {
     the_post(); ?>
 
-<div class="bg-[url('../assets/img/single-hero-background.jpg')] bg-cover">
+<div class="bg-fixed bg-[url('../assets/img/single-hero-background.jpg')] bg-cover">
     <div class="px-8 pt-24 lg:pt-28 lg:px-16 bg-white/70 backdrop-blur-md">
         <div class="xl:w-1/2 md:w-3/4 my-0 mx-auto">
             <h1 class='font-bold text-4xl lg:text-4xl text-blue text-center'><?php echo get_the_title(); ?></h1>
