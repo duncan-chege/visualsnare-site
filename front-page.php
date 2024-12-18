@@ -69,9 +69,34 @@
     </div>
 
     <div class="tab-pane hidden" id="tab-2">
-      <p class="text-gray-700">This is the content of Tab 2.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-12">
+      <?php
+      $args = [
+          "post_type" => "ui_design",
+          "order" => "ASC",
+          "posts_per_page" => 4,
+          // "paged" => 1, // Current page starts at 1
+      ];
+      $ui_design = new WP_Query($args);
+      ?>
+      <?php if ($ui_design->have_posts()): ?>
+          <?php while ($ui_design->have_posts()):
+              $ui_design->the_post(); ?>
+          <div class="w-[570px] h-[380px]">
+              <a href="<?php echo get_permalink(); ?>" class="relative">
+                  <?php the_post_thumbnail("large", [
+                      "class" =>
+                          "object-cover w-full h-full rounded-t-xl brightness-75",
+                  ]); ?>
+                  <p class="absolute text-dark-blue bg-white leading-none left-4 bottom-0 text-lg font-semibold px-4 py-2"> <?php the_title(); ?> </p>
+              </a>
+          </div>
+          <?php
+          endwhile; ?>
+      <?php endif; ?>
+      </div>
+      </div>
     </div>
-  </div>
 </div>
 
 <script>
