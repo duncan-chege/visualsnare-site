@@ -47,7 +47,7 @@
       <?php if ($web_dev->have_posts()): ?>
           <?php while ($web_dev->have_posts()):
               $web_dev->the_post(); ?>
-          <div class="w-[570px] h-[380px]">
+          <div class="lg:w-[570px] h-[380px]">
               <a href="<?php echo get_permalink(); ?>" class="relative">
                   <?php the_post_thumbnail("large", [
                       "class" =>
@@ -82,7 +82,7 @@
       <?php if ($ui_design->have_posts()): ?>
           <?php while ($ui_design->have_posts()):
               $ui_design->the_post(); ?>
-          <div class="w-[570px] h-[380px]">
+          <div class="lg:w-[570px] h-[380px]">
               <a href="<?php echo get_permalink(); ?>" class="relative">
                   <?php the_post_thumbnail("large", [
                       "class" =>
