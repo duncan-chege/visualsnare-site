@@ -4,7 +4,7 @@
     the_post(); ?>
 
 <div>
-    <h1 class='font-weight-bold mt-3'><?php echo get_the_title(); ?></h1>
+    <h1 class='font-bold mt-8'><?php echo get_the_title(); ?></h1>
     <?php the_content(); ?>
 </div>
 
