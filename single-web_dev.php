@@ -17,33 +17,51 @@
     </div>
 </div>
 
-<div class="xl:w-3/4 px-14 my-10 mx-auto flex gap-x-10">
-    <div class="xl:w-4/5 text-dark-blue">
-        <?php the_content(); ?>
+<div class="xl:w-3/4 px-14 my-16 mx-auto">
+    <div class="flex gap-x-10">
+        <div class="xl:w-4/5 text-dark-blue">
+            <?php the_content(); ?>
+        </div>
+
+        <div class="xl:w-1/5 space-y-2">
+            <?php if (pods_field_display('client')) : ?>
+                <div>
+                    <h3 class="font-bold text-dark-blue">Client</h3>
+                    <p class="text-sm text-gray-700 font-semibold">
+                    <?php echo pods_field_display( 'client' ); ?></p>
+                </div>
+            <?php endif?>
+            <?php if (pods_field_display('studio_partner')) : ?>
+                <div>
+                    <h3 class="font-bold text-dark-blue">Studio Partner</h3>
+                    <p class="text-sm text-gray-700 font-semibold">
+                    <?php echo pods_field_display( 'studio_partner' ); ?></p>
+                </div>
+            <?php endif?>
+            <?php if (pods_field_display('role')) : ?>
+                <div>
+                    <h3 class="font-bold text-dark-blue">Role</h3>
+                    <p class="text-sm text-gray-700 font-semibold">
+                    <?php echo pods_field_display( 'role' ); ?></p>
+                </div>
+            <?php endif?>
+        </div>
     </div>
-    <div class="xl:w-1/5 space-y-2">
-        <?php if (pods_field_display('client')) : ?>
+
+    <?php
+    //Retrieve the images field using pods
+    $images = pods_field('website_images');
+
+    if ($images) : ?>
+    <div class="grid grid-cols-2 gap-8 mt-16">
+        <?php foreach ($images as $image): ?>
             <div>
-                <h3 class="font-bold text-dark-blue">Client</h3>
-                <p class="text-sm text-gray-700 font-semibold">
-                <?php echo pods_field_display( 'client' ); ?></p>
+                <img src="<?php echo esc_url($image['guid']); ?>" alt="<?php echo esc_attr($image['post_title']);?>" class="w-full h-auto object-cover shadow-md rounded-lg">
             </div>
-        <?php endif?>
-        <?php if (pods_field_display('studio_partner')) : ?>
-            <div>
-                <h3 class="font-bold text-dark-blue">Studio Partner</h3>
-                <p class="text-sm text-gray-700 font-semibold">
-                <?php echo pods_field_display( 'studio_partner' ); ?></p>
-            </div>
-        <?php endif?>
-        <?php if (pods_field_display('role')) : ?>
-            <div>
-                <h3 class="font-bold text-dark-blue">Role</h3>
-                <p class="text-sm text-gray-700 font-semibold">
-                <?php echo pods_field_display( 'role' ); ?></p>
-            </div>
-        <?php endif?>
+    
+        <?php endforeach?>
     </div>
+    <?php endif; ?>
 </div>
 
 <?php
