@@ -8,10 +8,41 @@
         <div class="xl:w-1/2 md:w-3/4 my-0 mx-auto">
             <h1 class='font-bold text-4xl lg:text-4xl text-blue text-center'><?php echo get_the_title(); ?></h1>
         </div>
-        <div class="xl:w-2/3 mt-8 mx-auto relative">
-            <img class="h-[360px] w-full object-cover rounded-t-xl" src="<?php echo get_the_post_thumbnail_url();?>" alt="">
-            <a class="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-dark-blue text-white py-2 px-6 border-[3.5px] border-white rounded-t-xl" href="" target="_blank">Visit Website</a>
+        <div class="xl:w-3/4 mt-8 mx-auto relative">
+            <img class="h-[360px] w-full object-cover rounded-t-xl" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+            <a href="<?php echo pods_field_display(
+                "website_link"
+            ); ?>" target="_blank" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-dark-blue text-white py-2 px-6 border-[3.5px] border-white rounded-t-xl">Visit Website</a>
         </div>
+    </div>
+</div>
+
+<div class="xl:w-3/4 px-14 my-10 mx-auto flex gap-x-10">
+    <div class="xl:w-4/5 text-dark-blue">
+        <?php the_content(); ?>
+    </div>
+    <div class="xl:w-1/5 space-y-2">
+        <?php if (pods_field_display('client')) : ?>
+            <div>
+                <h3 class="font-bold text-dark-blue">Client</h3>
+                <p class="text-sm text-gray-700 font-semibold">
+                <?php echo pods_field_display( 'client' ); ?></p>
+            </div>
+        <?php endif?>
+        <?php if (pods_field_display('studio_partner')) : ?>
+            <div>
+                <h3 class="font-bold text-dark-blue">Studio Partner</h3>
+                <p class="text-sm text-gray-700 font-semibold">
+                <?php echo pods_field_display( 'studio_partner' ); ?></p>
+            </div>
+        <?php endif?>
+        <?php if (pods_field_display('role')) : ?>
+            <div>
+                <h3 class="font-bold text-dark-blue">Role</h3>
+                <p class="text-sm text-gray-700 font-semibold">
+                <?php echo pods_field_display( 'role' ); ?></p>
+            </div>
+        <?php endif?>
     </div>
 </div>
 

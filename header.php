@@ -21,7 +21,7 @@
                 <div class="flex flex-row no-wrap basis-1/2 justify-around items-center space-x-8 text-lg">
                     <a class="text-blue menu-item" href="<?php echo home_url('/'); ?>#home">home</a>
                     <a class="text-blue menu-item" href="<?php echo home_url('/'); ?>#work">work</a>
-                    <a class="text-blue menu-item" href="<?php echo home_url('/'); ?>#contacts">contacts</a>
+                    <a class="text-blue menu-item" href="#contacts">contacts</a>
                 </div>
             </nav>
         </header>
