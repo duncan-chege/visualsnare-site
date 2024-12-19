@@ -9,7 +9,6 @@
         echo " | ";
         bloginfo("name");
         ?></title>
-        <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/main-logo.svg">
 
         <?php wp_head(); ?>
     </head>
