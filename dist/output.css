@@ -689,12 +689,12 @@ html {
   height: 100%;
 }
 
-.w-28{
-  width: 7rem;
+.w-1\/2{
+  width: 50%;
 }
 
-.w-\[31\%\]{
-  width: 31%;
+.w-28{
+  width: 7rem;
 }
 
 .w-auto{
@@ -703,6 +703,10 @@ html {
 
 .w-full{
   width: 100%;
+}
+
+.w-\[50\%\]{
+  width: 50%;
 }
 
 .max-w-96{
@@ -1150,6 +1154,10 @@ html {
     width: 75%;
   }
 
+  .md\:w-\[31\%\]{
+    width: 31%;
+  }
+
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1185,6 +1193,10 @@ html {
 @media (min-width: 1024px){
   .lg\:w-2\/5{
     width: 40%;
+  }
+
+  .lg\:w-\[31\%\]{
+    width: 31%;
   }
 
   .lg\:w-\[570px\]{

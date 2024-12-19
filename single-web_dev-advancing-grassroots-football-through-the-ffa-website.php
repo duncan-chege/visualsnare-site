@@ -77,32 +77,32 @@
     </div>
 
         <div class="grid-box space-y-2">
-            <div class="grid-sizer w-[31%]"></div>
-            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+            <div class="grid-sizer md:w-[31%] w-[50%]"></div>
+            <div class="grid-item md:w-[31%] w-[50%]"><a class="my-link" data-gall="myGallery"
                     href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-1.jpg" alt="" class="w-full"><img
                         src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-1.jpg" alt="" class="w-full"></a></div>
-            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+            <div class="grid-item md:w-[31%] w-[50%]"><a class="my-link" data-gall="myGallery"
                     href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-2.jpg" alt="" class="w-full"><img
                         src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-2.jpg" alt="" class="w-full"></a></div>
-            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+            <div class="grid-item md:w-[31%] w-[50%]"><a class="my-link" data-gall="myGallery"
                     href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-3.jpg" alt="" class="w-full"><img
                         src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-3.jpg" alt="" class="w-full"></a></div>
-            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+            <div class="grid-item md:w-[31%] w-[50%]"><a class="my-link" data-gall="myGallery"
                     href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-4.jpg" alt="" class="w-full"><img
                         src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-4.jpg" alt="" class="w-full"></a></div>
-            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+            <div class="grid-item md:w-[31%] w-[50%]"><a class="my-link" data-gall="myGallery"
                     href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-5.jpg" alt="" class="w-full"><img
                         src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-5.jpg" alt="" class="w-full"></a></div>
-            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+            <div class="grid-item md:w-[31%] w-[50%]"><a class="my-link" data-gall="myGallery"
                     href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-6.png" alt="" class="w-full"><img
                         src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-6.png" alt="" class="w-full"></a></div>
-            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+            <div class="grid-item md:w-[31%] w-[50%]"><a class="my-link" data-gall="myGallery"
                     href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-7.png" alt="" class="w-full"><img
                         src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-7.png" alt="" class="w-full"></a></div>
-            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+            <div class="grid-item md:w-[31%] w-[50%]"><a class="my-link" data-gall="myGallery"
                     href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-8.jpg" alt="" class="w-full"><img
                         src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-8.jpg" alt="" class="w-full"></a></div>
-            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+            <div class="grid-item md:w-[31%] w-[50%]"><a class="my-link" data-gall="myGallery"
                     href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-9.png" alt="" class="w-full"><img
                         src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-9.png" alt="" class="w-full"></a></div>
         </div>
