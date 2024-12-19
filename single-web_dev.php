@@ -53,7 +53,7 @@
     $images = pods_field('website_images');
 
     if ($images) : ?>
-    <div class="grid grid-cols-2 md:gap-8 gap-4 md:mt-16 mt-10">
+    <div class="grid md:grid-cols-2 grid-cols-1 md:gap-8 gap-7 md:mt-16 mt-10">
         <?php foreach ($images as $image): ?>
             <div>
                 <img src="<?php echo esc_url($image['guid']); ?>" alt="<?php echo esc_attr($image['post_title']);?>" class="w-full h-auto object-cover shadow-md rounded-lg">
