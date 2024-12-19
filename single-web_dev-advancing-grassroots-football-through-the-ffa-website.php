@@ -4,7 +4,7 @@
     the_post(); ?>
 
 <div class="bg-fixed bg-[url('../assets/img/single-hero-background.jpg')] bg-cover">
-    <div class="px-8 pt-24 lg:pt-28 lg:px-16 bg-white/70 backdrop-blur-md">
+    <div data-aos="fade-up" data-aos-duration="2000" class="px-8 pt-24 lg:pt-28 lg:px-16 bg-white/70 backdrop-blur-md">
         <div class="xl:w-1/2 md:w-3/4 my-0 mx-auto">
             <h1 class='font-bold text-4xl lg:text-4xl text-blue text-center'><?php echo get_the_title(); ?></h1>
         </div>
@@ -18,7 +18,7 @@
 </div>
 
 <div class="xl:w-3/4 md:px-14 px-8 md:my-16 my-10 mx-auto">
-    <div class="flex md:flex-nowrap flex-wrap justify-between md:gap-x-8 gap-y-4">
+    <div data-aos="fade-up" data-aos-duration="2000" class="flex md:flex-nowrap flex-wrap justify-between md:gap-x-8 gap-y-4">
         <div class="md:w-3/4 text-dark-blue">
             <?php the_content(); ?>
         </div>
@@ -132,6 +132,8 @@
         navKeyboard: true,
         navTouch: true,
     });
+
+    AOS.init();
 </script>
 
 

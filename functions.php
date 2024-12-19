@@ -4,12 +4,15 @@
         wp_enqueue_style('main-css', get_stylesheet_uri());
         wp_enqueue_style('splide-css', '//cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', '4.1.4');
         wp_enqueue_style('venobox-css', get_template_directory_uri().'/assets/venobox/venobox.min.css' );
+        wp_enqueue_style('aos-css', '//unpkg.com/aos@2.3.1/dist/aos.css', '2.3.1');
 
-        wp_enqueue_script( 'jQuery','//code.jquery.com/jquery-3.6.0.min.js', array('jquery'));
+
+        wp_enqueue_script('jQuery','//code.jquery.com/jquery-3.6.0.min.js', array('jquery'));
         wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), null, true );
         wp_enqueue_script('venobox-js', get_template_directory_uri() . '/assets/venobox/venobox.min.js', '2.1.4');
-        wp_enqueue_script( 'masonry', '//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js' );
-        wp_enqueue_script( 'imagesloaded', '//unpkg.com/imagesloaded@4/imagesloaded.pkgd.js' );
+        wp_enqueue_script('masonry', '//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js' );
+        wp_enqueue_script('imagesloaded', '//unpkg.com/imagesloaded@4/imagesloaded.pkgd.js' );
+        wp_enqueue_script('aos-js', '//unpkg.com/aos@2.3.1/dist/aos.js' );
         wp_enqueue_script('ajax-pagination', get_template_directory_uri() . '/assets/js/ajax-pagination.js', ['jquery'], null, true);
         wp_localize_script('ajax-pagination', 'ajaxpagination', [
             'ajax_url' => admin_url('admin-ajax.php'),

@@ -2,12 +2,12 @@
 
 <div class="bg-[url('../assets/img/hero-background.jpg')] bg-cover" id="home">
   <div class="px-8 py-24 lg:py-28 lg:px-16 bg-white/70 backdrop-blur-md">
-    <div class="xl:w-1/2 md:w-3/4 my-0 mx-auto">
+    <div data-aos="fade-up" data-aos-duration="2000" class="xl:w-1/2 md:w-3/4 my-0 mx-auto">
       <div>
           <h1 class="font-bold text-4xl lg:text-6xl text-blue text-center"> Levelling up your business digitally </h1>
           <img class="text-center my-0 mx-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/heading-line.svg" alt="" />
       </div>
-      <div class=" text-base lg:text-lg text-blue mt-4 text-center">
+      <div class="text-base lg:text-lg text-blue mt-4 text-center">
           <p>Visualsnare is a digital design studio based in Nairobi-Kenya that solves business needs with great visual aesthetics, clear communication and effective software</p>
           <p class="mt-4">We specialize in bespoke web development which entails coding, testing applications, user interface design, user research and more </p>
           <div class="flex justify-around mt-8">
@@ -25,7 +25,7 @@
   </div>
 </div>
 
-<div class="px-8 lg:px-16 py-20" id="work">
+<div data-aos="fade-up" data-aos-duration="2000" class="px-8 lg:px-16 py-20" id="work">
   <h2 class="text-4xl text-blue mb-8 font-bold text-center">Work</h2>
   <div class="flex mb-8 lg:w-2/5 md:w-2/3 w-full justify-between my-0 mx-auto overflow-hidden" role="tablist">
     <button class="tab-btn py-2 px-6 rounded-lg" role="tab" data-tab="tab-1">Web Development</button>
@@ -129,6 +129,8 @@
       });
     });
   });
+
+  AOS.init();
 </script>
 
 <?php get_footer(); ?>
