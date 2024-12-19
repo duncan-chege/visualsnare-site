@@ -8,8 +8,7 @@
           <img class="text-center my-0 mx-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/heading-line.svg" alt="" />
       </div>
       <div class="text-base lg:text-lg text-blue mt-4 text-center">
-          <p>Visualsnare is a digital design studio based in Nairobi-Kenya that solves business needs with great visual aesthetics, clear communication and effective software</p>
-          <p class="mt-4">We specialize in bespoke web development which entails coding, testing applications, user interface design, user research and more </p>
+          <p><?php echo get_the_content(); ?></p>
           <div class="flex justify-around mt-8">
             <div class="flex flex-col">
               <img class="w-28 h-28 object-contain my-0 mx-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/web-dev-icon.svg" alt="web development icon">
