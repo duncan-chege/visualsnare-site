@@ -3,8 +3,13 @@
         wp_enqueue_style('output', get_template_directory_uri() . '/dist/output.css', array() );
         wp_enqueue_style('main-css', get_stylesheet_uri());
         wp_enqueue_style('splide-css', '//cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', '4.1.4');
+        wp_enqueue_style('venobox-css', get_template_directory_uri().'/assets/venobox/venobox.min.css' );
 
+        wp_enqueue_script( 'jQuery','//code.jquery.com/jquery-3.6.0.min.js', array('jquery'));
         wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), null, true );
+        wp_enqueue_script('venobox-js', get_template_directory_uri() . '/assets/venobox/venobox.min.js', '2.1.4');
+        wp_enqueue_script( 'masonry', '//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js' );
+        wp_enqueue_script( 'imagesloaded', '//unpkg.com/imagesloaded@4/imagesloaded.pkgd.js' );
         wp_enqueue_script('ajax-pagination', get_template_directory_uri() . '/assets/js/ajax-pagination.js', ['jquery'], null, true);
         wp_localize_script('ajax-pagination', 'ajaxpagination', [
             'ajax_url' => admin_url('admin-ajax.php'),
@@ -57,7 +62,7 @@
             while ($query->have_posts()) {
                 $query->the_post();
                 ?>
-                <div class="w-[570px] h-[380px]">
+                <div class="lg:w-[570px] h-[380px]">
                     <a href="<?php echo get_permalink(); ?>" class="relative">
                         <?php the_post_thumbnail('large', ['class' => 'object-cover w-full h-full rounded-t-xl brightness-75']); ?>
                         <p class="absolute text-dark-blue bg-white leading-none left-4 bottom-0 text-lg font-semibold px-4 py-2">
@@ -82,5 +87,34 @@
         ]);
     }
 
-    
+    function wpb_posts_nav(){
+        $next_post = get_next_post();
+        $prev_post = get_previous_post();
+          
+        if ( $next_post || $prev_post ) : ?>
+
+        <div class="wpb-posts-nav mt-8 flex justify-evenly flex-wrap gap-y-4">
+            <div class="previous-link-bloc">
+                <?php if ( ! empty( $prev_post ) ) : ?>
+                <a href="<?php echo get_permalink( $prev_post ); ?>">
+                    <div class="bg-light-blue text-dark-blue hover:bg-dark-blue hover:text-white p-4 rounded-md max-w-96">
+                        <p class="before:content-['<']"><span class="pl-2"><?php echo get_the_title( $prev_post ); ?></span></p>
+                    </div>
+                </a>
+                <?php endif; ?>
+            </div>
+            <div class="next-link-bloc">
+                <?php if ( ! empty( $next_post ) ) : ?>
+                <a href="<?php echo get_permalink( $next_post ); ?>">
+                    <div class="bg-light-blue text-dark-blue hover:bg-dark-blue hover:text-white p-4 rounded-md max-w-96">
+                        <p class="after:content-['>']"><span class="pr-2"><?php echo get_the_title( $next_post ); ?></span></p>
+                    </div>
+                </a>
+                <?php endif; ?>
+            </div>
+        </div> <!-- .wpb-posts-nav -->
+
+        <?php endif;
+    }
+
 ?>

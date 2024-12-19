@@ -17,13 +17,13 @@
     </div>
 </div>
 
-<div class="xl:w-3/4 px-14 my-16 mx-auto">
-    <div class="flex gap-x-10">
-        <div class="xl:w-4/5 text-dark-blue">
+<div class="xl:w-3/4 md:px-14 px-8 md:my-16 my-10 mx-auto">
+    <div class="flex md:flex-nowrap flex-wrap justify-between md:gap-x-8 gap-y-4">
+        <div class="md:w-3/4 text-dark-blue">
             <?php the_content(); ?>
         </div>
 
-        <div class="xl:w-1/5 space-y-2">
+        <div class="md:w-1/4 lg:space-y-2 space-y-4">
             <?php if (pods_field_display("client")): ?>
                 <div>
                     <h3 class="font-bold text-dark-blue">Client</h3>
@@ -53,7 +53,7 @@
     $images = pods_field("website_images");
 
     if ($images): ?>
-    <div class="grid grid-cols-2 gap-8 my-16">
+    <div class="grid grid-cols-2  md:gap-8 gap-4 my-16">
         <?php foreach ($images as $image): ?>
             <div>
                 <img src="<?php echo esc_url(
@@ -74,44 +74,65 @@
             creating a consistent visual identity for all FFA ventures from partnership announcements, FFA project
             announcements to most notably, The Africa Football Business Show- an online web series that engages football
             stakeholders in matters grassroots and international football </p>
+    </div>
 
-        <div class="grid">
-            <div class="grid-sizer"></div>
-            <div class="grid-item"><a class="my-link" data-gall="myGallery"
-                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-1.jpg" alt=""><img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-1.jpg" alt=""></a></div>
-            <div class="grid-item"><a class="my-link" data-gall="myGallery"
-                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-2.jpg" alt=""><img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-2.jpg" alt=""></a></div>
-            <div class="grid-item"><a class="my-link" data-gall="myGallery"
-                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-3.jpg" alt=""><img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-3.jpg" alt=""></a></div>
-            <div class="grid-item"><a class="my-link" data-gall="myGallery"
-                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-4.jpg" alt=""><img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-4.jpg" alt=""></a></div>
-            <div class="grid-item"><a class="my-link" data-gall="myGallery"
-                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-5.jpg" alt=""><img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-5.jpg" alt=""></a></div>
-            <div class="grid-item"><a class="my-link" data-gall="myGallery"
-                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-6.png" alt=""><img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-6.png" alt=""></a></div>
-            <div class="grid-item"><a class="my-link" data-gall="myGallery"
-                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-7.png" alt=""><img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-7.png" alt=""></a></div>
-            <div class="grid-item"><a class="my-link" data-gall="myGallery"
-                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-8.jpg" alt=""><img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-8.jpg" alt=""></a></div>
-            <div class="grid-item"><a class="my-link" data-gall="myGallery"
-                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-9.png" alt=""><img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-9.png" alt=""></a></div>
+        <div class="grid-box space-y-2">
+            <div class="grid-sizer w-[31%]"></div>
+            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-1.jpg" alt="" class="w-full"><img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-1.jpg" alt="" class="w-full"></a></div>
+            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-2.jpg" alt="" class="w-full"><img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-2.jpg" alt="" class="w-full"></a></div>
+            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-3.jpg" alt="" class="w-full"><img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-3.jpg" alt="" class="w-full"></a></div>
+            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-4.jpg" alt="" class="w-full"><img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-4.jpg" alt="" class="w-full"></a></div>
+            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-5.jpg" alt="" class="w-full"><img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-5.jpg" alt="" class="w-full"></a></div>
+            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-6.png" alt="" class="w-full"><img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-6.png" alt="" class="w-full"></a></div>
+            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-7.png" alt="" class="w-full"><img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-7.png" alt="" class="w-full"></a></div>
+            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-8.jpg" alt="" class="w-full"><img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-8.jpg" alt="" class="w-full"></a></div>
+            <div class="grid-item w-[31%]"><a class="my-link" data-gall="myGallery"
+                    href="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-9.png" alt="" class="w-full"><img
+                        src="<?php echo get_template_directory_uri(); ?>/assets/img/ffa-9.png" alt="" class="w-full"></a></div>
         </div>
 
-    </div>
+        <?php wpb_posts_nav(); ?>
+
 </div>
-
-
 
 <?php
 } ?>
+
+<script>
+    jQuery(document).ready(function ($) {
+        var $grid = $(".grid-box").imagesLoaded(function () {
+            $grid.masonry({
+                itemSelector: '.grid-item',
+                percentPosition: true,
+                columnWidth: '.grid-sizer',
+                gutter: 10
+            });
+        });
+    });
+
+    new VenoBox({
+        selector: ".my-link",
+        navigation: true,
+        navKeyboard: true,
+        navTouch: true,
+    });
+</script>
+
 
 <?php get_footer(); ?>

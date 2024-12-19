@@ -17,13 +17,13 @@
     </div>
 </div>
 
-<div class="xl:w-3/4 px-14 my-16 mx-auto">
-    <div class="flex gap-x-10">
-        <div class="xl:w-4/5 text-dark-blue">
+<div class="xl:w-3/4 md:px-14 px-8 md:my-16 my-10 mx-auto">
+    <div class="flex md:flex-nowrap flex-wrap justify-between md:gap-x-8 gap-y-4">
+        <div class="md:w-3/4 text-dark-blue">
             <?php the_content(); ?>
         </div>
 
-        <div class="xl:w-1/5 space-y-2">
+        <div class="md:w-1/4 lg:space-y-2 space-y-4">
             <?php if (pods_field_display('client')) : ?>
                 <div>
                     <h3 class="font-bold text-dark-blue">Client</h3>
@@ -53,7 +53,7 @@
     $images = pods_field('website_images');
 
     if ($images) : ?>
-    <div class="grid grid-cols-2 gap-8 mt-16">
+    <div class="grid grid-cols-2 md:gap-8 gap-4 md:mt-16 mt-10">
         <?php foreach ($images as $image): ?>
             <div>
                 <img src="<?php echo esc_url($image['guid']); ?>" alt="<?php echo esc_attr($image['post_title']);?>" class="w-full h-auto object-cover shadow-md rounded-lg">
@@ -62,6 +62,8 @@
         <?php endforeach?>
     </div>
     <?php endif; ?>
+
+    <?php wpb_posts_nav(); ?>
 </div>
 
 <?php
