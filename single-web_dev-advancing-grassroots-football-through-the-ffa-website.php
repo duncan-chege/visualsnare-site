@@ -68,7 +68,7 @@
     <?php endif;
     ?>
 
-    <div class="xl:w-3/4">
+    <div class="xl:w-3/4 mt-8">
         <h2 class="text-3xl text-dark-blue font-bold ">Graphic Services </h3>
         <p class="text-dark-blue mt-2 mb-12">The website was not enough. Mr Brian still had more projects in store and we were tasked with
             creating a consistent visual identity for all FFA ventures from partnership announcements, FFA project
