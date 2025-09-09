@@ -15,7 +15,7 @@
         </div>
         <div class="flex mt-8 gap-x-4">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/location-icon.svg">
-            <p class="text-lg text-orange font-semibold leading-tight">Nairobi Garage, Twentieth Century Plaza-<br> Mama Ngina St, Nairobi</p>
+            <p class="text-lg text-orange font-semibold leading-tight">Nairobi - Kenya</p>
         </div>
     </div>
 </footer>

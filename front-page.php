@@ -1,30 +1,30 @@
 <?php get_header(); ?>
 
-<div class="bg-[url('../assets/img/hero-background.jpg')] bg-cover" id="home">
+<div class="bg-[linear-gradient(180deg,#1eafcb8c,#ffffff)]" id="home">
   <div class="px-8 py-24 lg:py-28 lg:px-16 bg-white/70 backdrop-blur-md">
     <div data-aos="fade-up" data-aos-duration="2000" class="xl:w-1/2 md:w-3/4 my-0 mx-auto">
       <div>
-          <h1 class="font-bold text-4xl lg:text-6xl text-blue text-center"> Levelling up your business digitally </h1>
-          <img class="text-center my-0 mx-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/heading-line.svg" alt="" />
+        <h1 class="font-bold text-4xl lg:text-6xl text-blue text-center"> Levelling up your business digitally </h1>
+        <img class="text-center my-0 mx-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/heading-line.svg" alt="" />
       </div>
-      <div class="text-base lg:text-lg text-blue mt-4 text-center">
-          <p><?php echo get_the_content(); ?></p>
-          <div class="flex justify-around mt-8">
-            <div class="flex flex-col">
-              <img class="w-28 h-28 object-contain my-0 mx-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/web-dev-icon.svg" alt="web development icon">
-              <p class="font-bold text-center text-blue"> Web Development </p>
-            </div>
-            <div class="flex flex-col">
-              <img class="w-28 h-28 object-contain my-0 mx-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/ui-design-icon.svg" alt="ui design icon">
-              <p class="font-bold text-center text-blue"> UI Design </p>
-            </div>
+      <div class="text-base lg:text-lg font-medium text-blue mt-4 text-center">
+        <p><?php echo get_the_content(); ?></p>
+        <div class="flex justify-around mt-8">
+          <div class="flex flex-col">
+            <img class="w-28 h-28 object-contain my-0 mx-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/web-dev-icon.svg" alt="web development icon">
+            <p class="font-bold text-center text-blue"> Web Development </p>
           </div>
-      </div>    
+          <div class="flex flex-col">
+            <img class="w-28 h-28 object-contain my-0 mx-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/ui-design-icon.svg" alt="ui design icon">
+            <p class="font-bold text-center text-blue"> UI Design </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div data-aos="fade-up" data-aos-duration="2000" class="px-8 lg:px-16 py-20" id="work">
+<div data-aos="fade-up" data-aos-duration="2000" class="px-8 lg:px-16 lg:py-20 py-0" id="work">
   <h2 class="text-4xl text-blue mb-8 font-bold text-center">Work</h2>
   <div class="flex mb-8 lg:w-2/5 md:w-2/3 w-full justify-between my-0 mx-auto overflow-hidden" role="tablist">
     <button class="tab-btn py-2 px-6 rounded-lg" role="tab" data-tab="tab-1">Web Development</button>
@@ -34,68 +34,86 @@
   <div class="tab-content">
     <div class="tab-pane hidden" id="tab-1">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-12 web-dev">
-      <?php
-      $args = [
+        <?php
+        $args = [
           "post_type" => "web_dev",
           "order" => "ASC",
           "posts_per_page" => 4,
           "paged" => 1, // Current page starts at 1
-      ];
-      $web_dev = new WP_Query($args);
-      ?>
-      <?php if ($web_dev->have_posts()): ?>
+        ];
+        $web_dev = new WP_Query($args);
+        ?>
+        <?php if ($web_dev->have_posts()): ?>
           <?php while ($web_dev->have_posts()):
-              $web_dev->the_post(); ?>
-          <div class="lg:w-[570px] h-[380px]">
+            $web_dev->the_post(); ?>
+            <div class="lg:w-[570px] h-[380px]">
               <a href="<?php echo get_permalink(); ?>" class="relative">
-                  <?php the_post_thumbnail("large", [
-                      "class" =>
-                          "object-cover w-full h-full rounded-t-xl brightness-75",
-                  ]); ?>
-                  <p class="absolute text-dark-blue bg-white leading-none left-4 bottom-0 text-lg font-semibold px-4 py-2"> <?php the_title(); ?> </p>
+                <?php the_post_thumbnail("large", [
+                  "class" =>
+                  "object-cover w-full h-full rounded-t-xl brightness-75",
+                ]); ?>
+                <p class="absolute text-dark-blue bg-white leading-none left-4 bottom-0 text-lg font-semibold px-4 py-2"> <?php the_title(); ?> </p>
               </a>
-          </div>
+            </div>
           <?php
           endwhile; ?>
-      <?php endif; ?>
+        <?php endif; ?>
       </div>
       <div class="flex justify-center gap-4 mt-10">
-        <button id="prev-button" class="hover:bg-orange flex items-center bg-light-orange text-dark-blue font-bold px-4 py-2 rounded"><span class="pr-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/left-arrow-icon.svg">
-        </span>Previous</button>
-        <button id="next-button" class="hover:bg-orange flex items-center bg-light-orange text-dark-blue font-bold px-4 py-2 rounded">Next<span class="pl-4"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/right-arrow-icon.svg">
-        </span></button>
+        <button id="prev-button"
+          class="hover:bg-orange flex items-center bg-light-orange text-dark-blue font-bold px-4 py-2 rounded cursor-pointer disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed">
+          <span class="pr-4">
+            <!-- Left Arrow SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </span>
+          Previous
+        </button>
+
+        <button id="next-button"
+          class="hover:bg-orange flex items-center bg-light-orange text-dark-blue font-bold px-4 py-2 rounded cursor-pointer disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed">
+          Next
+          <span class="pl-4">
+            <!-- Right Arrow SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </button>
+
       </div>
     </div>
 
     <div class="tab-pane hidden" id="tab-2">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-12">
-      <?php
-      $args = [
+        <?php
+        $args = [
           "post_type" => "ui_design",
           "order" => "ASC",
           "posts_per_page" => 4,
           // "paged" => 1, // Current page starts at 1
-      ];
-      $ui_design = new WP_Query($args);
-      ?>
-      <?php if ($ui_design->have_posts()): ?>
+        ];
+        $ui_design = new WP_Query($args);
+        ?>
+        <?php if ($ui_design->have_posts()): ?>
           <?php while ($ui_design->have_posts()):
-              $ui_design->the_post(); ?>
-          <div class="lg:w-[570px] h-[380px]">
+            $ui_design->the_post(); ?>
+            <div class="lg:w-[570px] h-[380px]">
               <a href="<?php echo get_permalink(); ?>" class="relative">
-                  <?php the_post_thumbnail("large", [
-                      "class" =>
-                          "object-cover w-full h-full rounded-t-xl brightness-75",
-                  ]); ?>
-                  <p class="absolute text-dark-blue bg-white leading-none left-4 bottom-0 text-lg font-semibold px-4 py-2"> <?php the_title(); ?> </p>
+                <?php the_post_thumbnail("large", [
+                  "class" =>
+                  "object-cover w-full h-full rounded-t-xl brightness-75",
+                ]); ?>
+                <p class="absolute text-dark-blue bg-white leading-none left-4 bottom-0 text-lg font-semibold px-4 py-2"> <?php the_title(); ?> </p>
               </a>
-          </div>
+            </div>
           <?php
           endwhile; ?>
-      <?php endif; ?>
-      </div>
+        <?php endif; ?>
       </div>
     </div>
+  </div>
 </div>
 
 <script>
@@ -114,8 +132,8 @@
 
         // Deactivate all tabs and panes
         tabButtons.forEach((b) =>
-        b.classList.replace("bg-dark-blue", "bg-light-blue") &&
-        b.classList.replace("text-white", "text-blue"));
+          b.classList.replace("bg-dark-blue", "bg-light-blue") &&
+          b.classList.replace("text-white", "text-blue"));
 
         // Hide all panes
         tabPanes.forEach((pane) => pane.classList.add("hidden"));

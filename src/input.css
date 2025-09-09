@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-blue: #1F9FAF;
+  --color-light-blue: rgba(15, 148, 174, 0.25);
+  --color-dark-blue: #125666;
+  --color-orange: #F37A21;
+  --color-light-orange: rgba(242, 185, 128, 1);
+  --color-white: #ffffff;
+}
 
 @layer base {
     html {
