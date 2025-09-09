@@ -9,7 +9,11 @@
             echo " | ";
             bloginfo("name");
             ?></title>
-
+    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.svg" />
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/img/apple-touch-icon.png" />
+    <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/assets/img/site.webmanifest" />
     <?php wp_head(); ?>
 </head>
 
