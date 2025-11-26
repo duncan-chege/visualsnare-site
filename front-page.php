@@ -24,7 +24,7 @@
   </div>
 </div>
 
-<div data-aos="fade-up" data-aos-duration="2000" class="px-8 lg:px-16 lg:py-20 py-0" id="work">
+<div data-aos="fade-up" data-aos-duration="2000" class="px-8 lg:px-16 lg:pt-14 lg:pb-18 py-0" id="work">
   <h2 class="text-4xl text-blue mb-8 font-bold text-center">Work</h2>
   <div class="flex mb-8 lg:w-2/5 md:w-2/3 w-full justify-between my-0 mx-auto overflow-hidden" role="tablist">
     <button class="tab-btn py-2 px-6 rounded-lg" role="tab" data-tab="tab-1">Web Development</button>
@@ -59,7 +59,7 @@
           endwhile; ?>
         <?php endif; ?>
       </div>
-      <div class="flex justify-center gap-4 mt-10">
+      <div class="flex justify-center gap-4 mt-14">
         <button id="prev-button"
           class="hover:bg-orange flex items-center bg-light-orange text-dark-blue font-bold px-4 py-2 rounded cursor-pointer disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed">
           <span class="pr-4">
